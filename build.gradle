@@ -3,6 +3,7 @@ version = '0.1'
 allprojects {
   apply plugin: 'idea'
   repositories {
+    mavenLocal()
     mavenCentral()
     maven {
       url "https://repository.cloudera.com/artifactory/cloudera-repos/"
@@ -17,7 +18,7 @@ subprojects {
 
 project(':app') {
   dependencies {
-    compile "org.apache.kafka:kafka_2.10:0.10.1.0"
+    compile "org.apache.kafka:kafka_2.10:0.10.1.0-SNAPSHOT"
     testCompile group: 'junit', name: 'junit', version: '4.11'
   }
 
